@@ -7,16 +7,16 @@ import './App.css'
 // Ajuste de iconos Leaflet por defecto
 delete L.Icon.Default.prototype._getIconUrl
 L.Icon.Default.mergeOptions({
-  iconRetinaUrl: '/icons/marker-icon-2x.png',
-  iconUrl: '/icons/marker-icon.png',
-  shadowUrl: '/icons/marker-shadow.png'
+  iconRetinaUrl: '/buscasofa/icons/marker-icon-2x.png',
+  iconUrl: '/buscasofa/icons/marker-icon.png',
+  shadowUrl: '/buscasofa/icons/marker-shadow.png'
 })
 
 // Icono rojo para la ubicación actual
 const redIcon = new L.Icon({
-  iconRetinaUrl: '/icons/marker-icon-2x-red.png',
-  iconUrl: '/icons/marker-icon-red.png',
-  shadowUrl: '/icons/marker-shadow.png',
+  iconRetinaUrl: '/buscasofa/icons/marker-icon-2x-red.png',
+  iconUrl: '/buscasofa/icons/marker-icon-red.png',
+  shadowUrl: '/buscasofa/icons/marker-shadow.png',
   iconSize: [25, 41],
   iconAnchor: [12, 41],
   popupAnchor: [1, -34],
@@ -137,7 +137,7 @@ function App() {
   return (
     <div className="container">
       <header className="header">
-        <img src="/buscasofa.png" alt="BuscaSofa" className="logo" />
+        <img src="/buscasofa/buscasofa.png" alt="BuscaSofa" className="logo" />
       </header>
 
       <div className="buscar-input">
