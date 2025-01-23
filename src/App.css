@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f8fbfe;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 600px; /* Ancho máximo para pantallas grandes */
+  padding: 1rem; /* Espaciado lateral */
+  box-sizing: border-box; /* Incluye padding en el ancho total */
+}
+
+.header {
+  text-align: center;
+  padding: 1rem;
+}
+
+.header .logo {
+  max-width: 80%; /* Ajusta al 80% del ancho del contenedor */
+  height: auto; /* Mantiene la proporción */
+}
+
+.buscar-input {
+  margin: 1rem 0;
+  text-align: center;
+  color: #1e0382;
+}
+
+.buscar-input p {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1e0382;
+  margin-bottom: 1rem;
+}
+
+.buscar-input input {
+  display: inline-block;
+  width: 100%; /* Ocupa todo el ancho disponible en pantallas pequeñas */
+  max-width: 300px; /* Limita el ancho en pantallas grandes */
+  margin-bottom: 0.5rem; /* Espaciado entre elementos */
+}
+
+.buscar-input button {
+  display: inline-block;
+  width: 100%; /* Ocupa todo el ancho disponible en pantallas pequeñas */
+  max-width: 300px; /* Limita el ancho en pantallas grandes */
+  margin-bottom: 1rem; /* Espaciado entre elementos */
+}
+
+.mapa {
+  margin-bottom: 1rem;
+}
+
+.mapa .leaflet-container {
+  border-radius: 10px;
+  overflow: hidden;
+  height: 40vw; /* Altura proporcional al ancho de la pantalla */
+  max-height: 300px; /* Límite de altura para pantallas grandes */
+}
+
+.lista-estaciones {
+  max-width: 600px;
+  margin: 20px auto;
+  background-color: #f8fbfe;
+  border-radius: 26px;
+  padding: 1rem;
+}
+
+.lista-estaciones h2 {
+  margin-top: 0;
+  border-bottom: 1px solid #e3e3e3;
+  padding-bottom: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.lista-estaciones ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.lista-estaciones li {
+  padding: 0.75rem;
+  font-size: 1rem;
+}
+
+.lista-estaciones li:nth-child(even) {
+  background-color: #e1f5fe;
+}
+
+.lista-estaciones li:hover {
+  background-color: #e9eef3;
+}
+
+button {
+  background-color: white;
+  color: #007bff;
+  border: 2px solid #007bff;
+  border-radius: 24px;
+  padding: 0.5rem 1rem; /* Botón más grande para pantallas táctiles */
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  width: 100%; /* Botón ocupa todo el ancho en pantallas pequeñas */
+  max-width: 200px; /* Ancho máximo en pantallas grandes */
+}
+
+button:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+input {
+  border: 2px solid #007bff;
+  border-radius: 24px; /* Redondeado */
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  width: 100%; /* Ocupa todo el ancho en pantallas pequeñas */
+  max-width: 300px; /* Límite de ancho en pantallas grandes */
+}
+
+input:focus {
+  border-color: #0056b3;
+  box-shadow: 0 0 5px #007bff;
+}
+
+/* Media Queries para pantallas pequeñas */
+@media (max-width: 768px) {
+  .container {
+    max-width: 90%; /* Reduce el ancho en pantallas pequeñas */
+    padding: 1rem;
+  }
+
+  .header .logo {
+    max-width: 90%; /* Ajusta el logo al ancho del contenedor */
+  }
+
+  .buscar-input {
+    text-align: center; /* Centra en pantallas pequeñas */
+  }
+
+  .buscar-input input,
+  .buscar-input button {
+    max-width: 100%; /* Ocupan todo el ancho disponible */
+  }
+
+  .mapa .leaflet-container {
+    height: 50vw; /* Altura ligeramente mayor en pantallas pequeñas */
+    max-height: 250px; /* Menor altura máxima */
+  }
+
+  .lista-estaciones {
+    padding: 0.5rem; /* Reduce el padding */
+    border-radius: 16px; /* Menor redondeado */
+  }
+
+  .lista-estaciones h2 {
+    font-size: 1.2rem; /* Tamaño de texto más pequeño */
+  }
+
+  .lista-estaciones li {
+    font-size: 0.9rem; /* Reduce el texto */
+    padding: 0.5rem;
+  }
+}
